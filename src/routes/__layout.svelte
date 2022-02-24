@@ -6,12 +6,11 @@
   const pageTitle = 'Doginder🐶';
   const description = 'Tinder for Dogs';
   const url = 'https://ryoppippi.github.io/sveltekit-dog-tinder/';
-  const imageUrl = 'https://ryoppippi.github.io/sveltekit-dog-tinder/doginder.png';
+  const imageUrl = `${base}/ogp.jpg`;
   const imageAlt = 'Doginder🐶 - Tinder for Dogs';
 </script>
 
 <svelte:head>
-  <title>{pageTitle}</title>
   <link
     rel="icon"
     href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>🐶</text></svg>"
@@ -20,8 +19,8 @@
 </svelte:head>
 
 <MetaTags
-  title="pageTitle"
-  description="description"
+  title={pageTitle}
+  {description}
   twitter={{
     handle: '@ryoppippi',
     site: '@ryoppipi',
@@ -38,8 +37,8 @@
     images: [
       {
         url: imageUrl,
-        width: 800,
-        height: 600,
+        width: 778,
+        height: 813,
         alt: imageAlt,
       },
     ],
