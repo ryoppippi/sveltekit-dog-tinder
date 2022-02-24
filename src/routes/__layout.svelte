@@ -16,3 +16,5 @@
 </div>
 
 <slot />
+
+<img src="https://visitor-badge.glitch.me/badge?page_id=sveltekit-dog-tinder" alt="visitor badge" hidden />
