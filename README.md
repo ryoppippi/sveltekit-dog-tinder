@@ -1,3 +1,4 @@
-# Sveltekit + Tailwind + DaisyUI
+# Doginder:dog: - Tinder for Dog
 
-Clone this repository and run `npm install` to install dependencies!
+Tinder for :dog:!
+Made with SveletKit + TailwindCSS + DaisyUI
