@@ -1,8 +1,8 @@
-# Doginder:dog: - Tinder for Dog
+# Doginder:dog: - Tinder for Dogs
 
 Tinder for :dog:!
 Made with SveletKit + TailwindCSS + DaisyUI
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/1560508/155580062-058dea4f-5ce1-4298-b1bd-0275335dd45e.jpg" alt="screen"  width="500">
+<img src="https://user-images.githubusercontent.com/1560508/155586698-1a4a3552-a34e-444d-9e9f-f0cfa7409f26.jpg" alt="screen"  height="500">
 </div>
