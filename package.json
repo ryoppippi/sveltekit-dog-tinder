@@ -33,6 +33,7 @@
     "svelte-check": "^2.2.6",
     "svelte-lazy": "^1.1.0",
     "svelte-local-storage-store": "^0.2.6",
+    "svelte-meta-tags": "^2.3.0",
     "svelte-preprocess": "^4.10.1",
     "tailwindcss": "^3.0.23",
     "tslib": "^2.3.1",
