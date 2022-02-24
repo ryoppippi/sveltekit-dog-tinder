@@ -17,11 +17,12 @@
 <script lang="ts">
   export let dogRes: { message: string };
 
-  let imageUrl = dogRes.message;
-
   import { onMount } from 'svelte';
   import { get } from 'svelte/store';
   import { likedDogsList } from '$lib/store';
+  import { base } from '$app/paths';
+
+  let imageUrl = dogRes.message;
 
   const loadDogImage = async () => {
     const response = await fetch(url);
