@@ -4,7 +4,7 @@
 
 <div class="navbar bg-base-100">
   <div class="flex-1">
-    <a class="btn btn-ghost text-xl normal-case">dogInder</a>
+    <a class="btn btn-ghost text-xl normal-case" href="/">dogInder</a>
   </div>
   <div class="flex-none">
     <ul class="menu menu-horizontal p-0">
