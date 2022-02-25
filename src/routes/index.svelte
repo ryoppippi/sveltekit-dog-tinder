@@ -17,10 +17,8 @@
 <script lang="ts">
   export let dogRes: { message: string };
 
-  import { onMount } from 'svelte';
   import { get } from 'svelte/store';
   import { likedDogsList } from '$lib/store';
-  import { base } from '$app/paths';
 
   let imageUrl = dogRes.message;
 
@@ -35,9 +33,6 @@
   const saveLikedDogsURL = () => {
     likedDogsList.set([...get(likedDogsList), imageUrl]);
   };
-  onMount(async () => {
-    imageUrl = dogRes.message;
-  });
 </script>
 
 <div class="grid h-full place-items-center">
