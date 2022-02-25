@@ -18,7 +18,7 @@
 
 <div class="grid h-full grid-cols-1 place-items-center gap-4 md:grid-cols-2">
   {#each $likedDogsList as src}
-    <Lazy height={300} offset={0}>
+    <Lazy height={250} offset={0}>
       <div
         class="card relative w-96 bg-base-200 shadow-xl"
         on:mouseenter={() => toggleShow(src)}
@@ -43,4 +43,3 @@
     </Lazy>
   {/each}
 </div>
-
