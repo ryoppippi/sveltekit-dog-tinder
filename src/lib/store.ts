@@ -1,3 +1,3 @@
-import { writable } from 'svelte-local-storage-store'
+import { writable } from 'svelte-local-storage-store';
 
-export const likedDogsList = writable('likedDogsList',[]);
+export const likedDogsList = writable('likedDogsList', []);
