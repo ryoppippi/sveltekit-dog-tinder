@@ -1,8 +1,6 @@
 <script lang="ts">
-  export let dummy = 'dummy';
   import { createEventDispatcher } from 'svelte';
-  import { fade, blur, fly, slide, scale } from 'svelte/transition';
-  import { quintOut } from 'svelte/easing';
+  import { fade, fly, scale } from 'svelte/transition';
   import { get } from 'svelte/store';
   import { likedDogsList } from '$lib/store';
 
@@ -29,7 +27,7 @@
   };
 </script>
 
-{#await loadDogImage() then a}
+{#await loadDogImage() then _}
   <div
     class="card w-96 bg-base-200 shadow-xl"
     in:scale={{ delay: 200, duration: 300 }}

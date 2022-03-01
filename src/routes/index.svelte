@@ -11,6 +11,6 @@
 
 <div class="stack grid h-full place-items-center">
   {#each cardDummyList as dummy (dummy)}
-    <Card on:buttonTapped={listChange} {dummy} />
+    <Card on:buttonTapped={listChange} />
   {/each}
 </div>
