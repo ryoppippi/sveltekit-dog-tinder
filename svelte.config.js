@@ -15,7 +15,7 @@ const config = {
       pages: 'build',
       assets: 'build',
       fallback: null,
-      precompress: false,
+      precompress: true,
     }),
     paths: {
       base: dev ? '' : '/sveltekit-dog-tinder',
