@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Card from '$lib/components/card.svelte';
+  import Card from '$components/card.svelte';
 
   let cardDummyList = [0];
 
