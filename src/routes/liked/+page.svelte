@@ -2,7 +2,7 @@
   import Lazy from 'svelte-lazy';
   import { likedDogsList } from '$lib/store';
 
-  let show: string = null;
+  let show: string | null = null;
 
   function toggleShow(url: string) {
     show = show ? null : url;
