@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-cloudflare';
 import preprocess from 'svelte-preprocess';
 import path from 'path';
 
@@ -11,21 +11,7 @@ const config = {
   }),
 
   kit: {
-    adapter: adapter({
-      // default options are shown
-      pages: 'build',
-      assets: 'build',
-      fallback: null,
-      precompress: true,
-    }),
-    paths: {
-      base: dev ? '' : '/sveltekit-dog-tinder',
-    },
-    appDir: 'internal',
-    alias: {
-      // these are the aliases and paths to them
-      $components: path.resolve('./src/components'),
-    },
+    adapter: adapter(),
   },
 };
 
