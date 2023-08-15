@@ -30,11 +30,11 @@
 {#await loadDogImage() then _}
   <div
     class="card w-96 bg-base-200 shadow-xl"
-    in:scale={{ delay: 200, duration: 300 }}
-    out:fly={{ delay: outMoveDirection ? 100 : 0, duration: outMoveDirection ? 400 : 0, x: outMoveDirection }}
+    in:scale|global={{ delay: 200, duration: 300 }}
+    out:fly|global={{ delay: outMoveDirection ? 100 : 0, duration: outMoveDirection ? 400 : 0, x: outMoveDirection }}
   >
     <figure>
-      <img class="h-60 object-cover" src={imageUrl} alt="Dog" in:fade />
+      <img class="h-60 object-cover" src={imageUrl} alt="Dog" in:fade|global />
     </figure>
     <div class="card-body items-center text-center">
       <h2 class="card-title">Do You ❤️ This 🐶 ?</h2>

@@ -14,3 +14,5 @@
     <Card on:buttonTapped={listChange} />
   {/each}
 </div>
+
+
