@@ -1,13 +1,8 @@
 {
   "vulnerabilityAlerts": {
-    "labels": [
-      "security"
-    ]
+    "labels": ["security"]
   },
-  "labels": [
-    "dependencies",
-    "renovate"
-  ],
+  "labels": ["dependencies", "renovate"],
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "rangeStrategy": "bump",
   "lockFileMaintenance": {
