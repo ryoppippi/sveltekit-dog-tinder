@@ -4,7 +4,7 @@
   import { get } from 'svelte/store';
   import { likedDogsList } from '$lib/store';
 
-  let imageUrl = null;
+  let imageUrl=''
   let outMoveDirection = 0;
   const dispatch = createEventDispatcher();
 
@@ -19,7 +19,8 @@
   };
 
   const saveLikedDogsURL = () => {
-    likedDogsList.set([...new Set([...get(likedDogsList), imageUrl])]);
+    const newLikedDogsList = [...new Set([...get(likedDogsList), imageUrl])];
+    likedDogsList.set(newLikedDogsList);
   };
 
   const buttonTapped = () => {
