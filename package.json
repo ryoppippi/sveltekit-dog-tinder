@@ -37,6 +37,6 @@
   },
   "type": "module",
   "dependencies": {
-    "cssnano": "^5.1.15"
+    "cssnano": "^6.0.1"
   }
 }
