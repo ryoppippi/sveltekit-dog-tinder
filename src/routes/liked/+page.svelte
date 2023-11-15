@@ -20,6 +20,7 @@
 	{#each $likedDogsList as src}
 		<Lazy height={250} offset={0}>
 			<div
+				role="presentation"
 				class="card relative w-96 bg-base-200 shadow-xl"
 				on:mouseenter={() => toggleShow(src)}
 				on:mouseleave={() => toggleShow(src)}
