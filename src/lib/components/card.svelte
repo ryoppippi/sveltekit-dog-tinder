@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
 	import { fade, fly, scale } from 'svelte/transition';
-	import { get } from 'svelte/store';
-	import { likedDogsList } from '$lib/store';
+	import { likedDogsList } from '$lib/rune.svelte.js';
 
 	let imageUrl = '';
 	let outMoveDirection = 0;
@@ -16,11 +15,6 @@
 			imageUrl = dogRes.message;
 		}
 		return imageUrl;
-	};
-
-	const saveLikedDogsURL = () => {
-		const newLikedDogsList = [...new Set([...get(likedDogsList), imageUrl])];
-		likedDogsList.set(newLikedDogsList);
 	};
 
 	const buttonTapped = () => {
@@ -56,7 +50,7 @@
 				<button
 					class="btn btn-secondary btn-outline btn-lg"
 					on:click={async () => {
-						saveLikedDogsURL();
+						likedDogsList.add(imageUrl);
 						outMoveDirection = 500;
 						buttonTapped();
 					}}

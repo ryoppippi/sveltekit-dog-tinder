@@ -1,23 +1,16 @@
 <script lang="ts">
 	import Lazy from 'svelte-lazy';
-	import { likedDogsList } from '$lib/store';
+	import { likedDogsList } from '$lib/rune.svelte.js';
 
 	let show: string | null = null;
 
 	function toggleShow(url: string) {
 		show = show ? null : url;
 	}
-
-	const deleteDog = (url: string) => {
-		$likedDogsList = $likedDogsList.filter((dogUrl) => dogUrl !== url);
-		if (show === url) {
-			show = null;
-		}
-	};
 </script>
 
 <div class="grid h-full grid-cols-1 place-items-center gap-4 md:grid-cols-2">
-	{#each $likedDogsList as src}
+	{#each likedDogsList.value as src}
 		<Lazy height={250} offset={0}>
 			<div
 				role="presentation"
@@ -31,7 +24,7 @@
 				{#if show === src}
 					<button
 						class="btn btn-circle btn-error absolute right-0 top-0"
-						on:click={() => deleteDog(src)}
+						on:click={() => likedDogsList.remove(src)}
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"

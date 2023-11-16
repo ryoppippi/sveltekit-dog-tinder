@@ -1,7 +1,9 @@
 <script lang="ts">
 	import Card from '$lib/components/card.svelte';
 
-	let cardDummyList = [0];
+	// TODO: wait for eslint-plugin-svelte to support runes
+	// eslint-disable-next-line no-undef
+	let cardDummyList = $state([0]);
 
 	const listChange = () => {
 		cardDummyList = [...cardDummyList.slice(1), Math.max(...cardDummyList) + 1];
