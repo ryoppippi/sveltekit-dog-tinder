@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { fade, fly, scale } from 'svelte/transition';
-	import { likedDogsListF } from '$lib/rune.svelte.js';
+	import { LikedDogsList } from '$lib/rune.svelte.js';
 
-	const likedDogsList = likedDogsListF();
+	const likedDogsList = new LikedDogsList();
 
 	// TODO: wait for eslint-plugin-svelte to support runes
 	// eslint-disable-next-line no-undef

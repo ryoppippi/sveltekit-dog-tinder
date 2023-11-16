@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Lazy from 'svelte-lazy';
-	import { likedDogsListF } from '$lib/rune.svelte.js';
+	import { LikedDogsList } from '$lib/rune.svelte.js';
 
 	let show: string | null = null;
 
@@ -8,7 +8,7 @@
 		show = show ? null : url;
 	}
 
-	const likedDogsList = likedDogsListF();
+	const likedDogsList = new LikedDogsList();
 </script>
 
 <div class="grid h-full grid-cols-1 place-items-center gap-4 md:grid-cols-2">

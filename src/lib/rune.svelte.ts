@@ -1,33 +1,21 @@
-function factory() {
-	let likedDogsListRune = $state<Set<string>>(new Set());
+export class LikedDogsList {
+	likedDogsListRune = $state<Set<string>>(new Set());
 
-	return {
-		set value(v: Set<string>) {
-			likedDogsListRune = v;
-		},
+	set value(v: Set<string>) {
+		this.likedDogsListRune = v;
+	}
 
-		get value() {
-			return likedDogsListRune;
-		},
+	get value() {
+		return this.likedDogsListRune;
+	}
 
-		add: (dog: string) => {
-			likedDogsListRune = likedDogsListRune.add(dog);
-		},
+	add(dog: string) {
+		this.likedDogsListRune = this.likedDogsListRune.add(dog);
+	}
 
-		remove: (dog: string) => {
-			likedDogsListRune.delete(dog);
-			// eslint-disable-next-line no-self-assign
-			likedDogsListRune = likedDogsListRune;
-			console.log({ dog, likedDogsListRune });
-		}
-	};
-}
-
-// TODO: wait for rune bug
-// url: https://github.com/sveltejs/svelte/issues/9301
-
-let singleton: ReturnType<typeof factory>;
-
-export function likedDogsListF() {
-	return singleton ?? (singleton = factory());
+	remove(dog: string) {
+		this.likedDogsListRune.delete(dog);
+		// eslint-disable-next-line no-self-assign
+		this.likedDogsListRune = this.likedDogsListRune;
+	}
 }
