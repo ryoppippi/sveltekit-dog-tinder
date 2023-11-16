@@ -1,34 +1,38 @@
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte';
 	import { fade, fly, scale } from 'svelte/transition';
-	import { get } from 'svelte/store';
-	import { likedDogsList } from '$lib/store';
+	import { LikedDogsList } from '$lib/rune.svelte.js';
 
-	let imageUrl = '';
+	const likedDogsList = new LikedDogsList();
+
+	// TODO: wait for eslint-plugin-svelte to support runes
+	// eslint-disable-next-line no-undef
+	const { onbuttonTapped } = $props<{
+		onbuttonTapped: () => void;
+	}>();
+
+	// TODO: wait for eslint-plugin-svelte to support runes
+	// eslint-disable-next-line no-undef
+	let imageUrl = $state(Promise.resolve(''));
 	let outMoveDirection = 0;
-	const dispatch = createEventDispatcher();
 
 	const loadDogImage = async () => {
 		const url = 'https://dog.ceo/api/breeds/image/random';
 		const response = await fetch(url);
 		if (response.ok) {
-			const dogRes = await response.json();
-			imageUrl = dogRes.message;
+			const { message } = await response.json();
+			return message;
 		}
-		return imageUrl;
+		throw new Error('Network response was not ok.');
 	};
 
-	const saveLikedDogsURL = () => {
-		const newLikedDogsList = [...new Set([...get(likedDogsList), imageUrl])];
-		likedDogsList.set(newLikedDogsList);
-	};
-
-	const buttonTapped = () => {
-		dispatch('buttonTapped');
-	};
+	// TODO: wait for eslint-plugin-svelte to support runes
+	// eslint-disable-next-line no-undef
+	$effect(() => {
+		imageUrl = loadDogImage();
+	});
 </script>
 
-{#await loadDogImage() then _}
+{#await imageUrl then imageUrl}
 	<div
 		class="card w-96 bg-base-200 shadow-xl"
 		in:scale|global={{ delay: 200, duration: 300 }}
@@ -46,19 +50,19 @@
 			<div class="card-actions justify-center">
 				<button
 					class="btn btn-primary btn-outline btn-lg"
-					on:click={async () => {
+					onclick={() => {
 						outMoveDirection = -500;
-						buttonTapped();
+						onbuttonTapped();
 					}}
 				>
 					💔
 				</button>
 				<button
 					class="btn btn-secondary btn-outline btn-lg"
-					on:click={async () => {
-						saveLikedDogsURL();
+					onclick={async () => {
+						likedDogsList.add(imageUrl);
 						outMoveDirection = 500;
-						buttonTapped();
+						onbuttonTapped();
 					}}
 				>
 					❤️
