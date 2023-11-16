@@ -8,6 +8,10 @@
 	const url = 'https://ryoppippi.github.io/sveltekit-dog-tinder/';
 	const imageUrl = `${base}/ogp.jpg`;
 	const imageAlt = 'Doginder🐶 - Tinder for Dogs';
+
+	// TODO: wait for eslint-plugin-svelte to support runes
+	// eslint-disable-next-line no-undef
+	const { children } = $props();
 </script>
 
 <svelte:head>
@@ -62,7 +66,8 @@
 	</div>
 </div>
 
-<slot />
+
+{@render children()}
 
 <img
 	src="https://visitor-badge.glitch.me/badge?page_id=sveltekit-dog-tinder"
