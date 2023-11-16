@@ -10,21 +10,29 @@
 		onbuttonTapped: () => void;
 	}>();
 
-	let imageUrl = '';
+	// TODO: wait for eslint-plugin-svelte to support runes
+	// eslint-disable-next-line no-undef
+	let imageUrl = $state(Promise.resolve(''));
 	let outMoveDirection = 0;
 
 	const loadDogImage = async () => {
 		const url = 'https://dog.ceo/api/breeds/image/random';
 		const response = await fetch(url);
 		if (response.ok) {
-			const dogRes = await response.json();
-			imageUrl = dogRes.message;
+			const { message } = await response.json();
+			return message;
 		}
-		return imageUrl;
+		throw new Error('Network response was not ok.');
 	};
+
+	// TODO: wait for eslint-plugin-svelte to support runes
+	// eslint-disable-next-line no-undef
+	$effect(() => {
+		imageUrl = loadDogImage();
+	});
 </script>
 
-{#await loadDogImage() then _}
+{#await imageUrl then imageUrl}
 	<div
 		class="card w-96 bg-base-200 shadow-xl"
 		in:scale|global={{ delay: 200, duration: 300 }}
