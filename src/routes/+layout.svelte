@@ -66,7 +66,6 @@
 	</div>
 </div>
 
-
 {@render children()}
 
 <img

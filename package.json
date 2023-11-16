@@ -6,7 +6,7 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"build": "vite build",
-		"lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+		"lint": "prettier --ignore-path .gitignore --check . && eslint --ignore-path .gitignore .",
 		"format": "prettier --write .",
 		"preview": "vite preview"
 	},

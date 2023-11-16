@@ -49,7 +49,7 @@
 			<h2 class="card-title">Do You ❤️ This 🐶 ?</h2>
 			<div class="card-actions justify-center">
 				<button
-					class="btn btn-outline btn-primary btn-lg"
+					class="btn btn-primary btn-outline btn-lg"
 					onclick={() => {
 						outMoveDirection = -500;
 						onbuttonTapped();
@@ -58,7 +58,7 @@
 					💔
 				</button>
 				<button
-					class="btn btn-outline btn-secondary btn-lg"
+					class="btn btn-secondary btn-outline btn-lg"
 					onclick={async () => {
 						likedDogsList.add(imageUrl);
 						outMoveDirection = 500;
