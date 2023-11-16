@@ -17,8 +17,8 @@
 			<div
 				role="presentation"
 				class="card relative w-96 bg-base-200 shadow-xl"
-				on:mouseenter={() => toggleShow(src)}
-				on:mouseleave={() => toggleShow(src)}
+				onmouseenter={() => toggleShow(src)}
+				onmouseleave={() => toggleShow(src)}
 			>
 				<figure>
 					<img class="h-60 object-cover" {src} alt="Dog" />
@@ -26,7 +26,7 @@
 				{#if show === src}
 					<button
 						class="btn btn-circle btn-error absolute right-0 top-0"
-						on:click={() => likedDogsList.remove(src)}
+						onclick={() => likedDogsList.remove(src)}
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
