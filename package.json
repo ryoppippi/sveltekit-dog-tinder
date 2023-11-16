@@ -2,13 +2,13 @@
 	"name": "sveltekit-dog-tinder",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "vite dev",
+		"dev": "bun -b vite dev",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"build": "vite build",
+		"build": "bun -b vite build",
 		"lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
 		"format": "prettier --plugin-search-dir . --write .",
-		"preview": "vite preview"
+		"preview": "bun -b vite preview"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-cloudflare": "^2.3.3",
