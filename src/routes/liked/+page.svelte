@@ -1,12 +1,14 @@
 <script lang="ts">
 	import Lazy from 'svelte-lazy';
-	import { likedDogsList } from '$lib/rune.svelte.js';
+	import { likedDogsListF } from '$lib/rune.svelte.js';
 
 	let show: string | null = null;
 
 	function toggleShow(url: string) {
 		show = show ? null : url;
 	}
+
+	const likedDogsList = likedDogsListF();
 </script>
 
 <div class="grid h-full grid-cols-1 place-items-center gap-4 md:grid-cols-2">

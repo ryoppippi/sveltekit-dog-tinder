@@ -1,11 +1,17 @@
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte';
 	import { fade, fly, scale } from 'svelte/transition';
-	import { likedDogsList } from '$lib/rune.svelte.js';
+	import { likedDogsListF } from '$lib/rune.svelte.js';
+
+	const likedDogsList = likedDogsListF();
+
+	// TODO: wait for eslint-plugin-svelte to support runes
+	// eslint-disable-next-line no-undef
+	const { onbuttonTapped } = $props<{
+		onbuttonTapped: () => void;
+	}>();
 
 	let imageUrl = '';
 	let outMoveDirection = 0;
-	const dispatch = createEventDispatcher();
 
 	const loadDogImage = async () => {
 		const url = 'https://dog.ceo/api/breeds/image/random';
@@ -15,10 +21,6 @@
 			imageUrl = dogRes.message;
 		}
 		return imageUrl;
-	};
-
-	const buttonTapped = () => {
-		dispatch('buttonTapped');
 	};
 </script>
 
@@ -40,19 +42,19 @@
 			<div class="card-actions justify-center">
 				<button
 					class="btn btn-primary btn-outline btn-lg"
-					on:click={async () => {
+					onclick={() => {
 						outMoveDirection = -500;
-						buttonTapped();
+						onbuttonTapped();
 					}}
 				>
 					💔
 				</button>
 				<button
 					class="btn btn-secondary btn-outline btn-lg"
-					on:click={async () => {
+					onclick={async () => {
 						likedDogsList.add(imageUrl);
 						outMoveDirection = 500;
-						buttonTapped();
+						onbuttonTapped();
 					}}
 				>
 					❤️
