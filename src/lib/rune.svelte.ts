@@ -14,7 +14,7 @@ export class LikedDogsList {
 		}
 	}
 
-	set value(v: Set<string>) {
+	set value(v) {
 		this.likedDogsListRune = v;
 	}
 
