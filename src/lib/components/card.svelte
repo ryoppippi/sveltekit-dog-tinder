@@ -13,7 +13,10 @@
 	// TODO: wait for eslint-plugin-svelte to support runes
 	// eslint-disable-next-line no-undef
 	let imageUrl = $state(Promise.resolve(''));
-	let outMoveDirection = 0;
+
+	// TODO: wait for eslint-plugin-svelte to support runes
+	// eslint-disable-next-line no-undef
+	let outMoveDirection = $state(0);
 
 	const loadDogImage = async () => {
 		const url = 'https://dog.ceo/api/breeds/image/random';
