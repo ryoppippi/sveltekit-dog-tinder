@@ -9,8 +9,6 @@
 	const imageUrl = `${base}/ogp.jpg`;
 	const imageAlt = 'Doginder🐶 - Tinder for Dogs';
 
-	// TODO: wait for eslint-plugin-svelte to support runes
-	// eslint-disable-next-line no-undef
 	const { children } = $props();
 </script>
 

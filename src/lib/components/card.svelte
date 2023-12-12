@@ -4,18 +4,12 @@
 
 	const likedDogsList = new LikedDogsList();
 
-	// TODO: wait for eslint-plugin-svelte to support runes
-	// eslint-disable-next-line no-undef
 	const { onbuttonTapped } = $props<{
 		onbuttonTapped: () => void;
 	}>();
 
-	// TODO: wait for eslint-plugin-svelte to support runes
-	// eslint-disable-next-line no-undef
 	let imageUrl = $state(Promise.resolve(''));
 
-	// TODO: wait for eslint-plugin-svelte to support runes
-	// eslint-disable-next-line no-undef
 	let outMoveDirection = $state(0);
 
 	const loadDogImage = async () => {
@@ -28,8 +22,6 @@
 		throw new Error('Network response was not ok.');
 	};
 
-	// TODO: wait for eslint-plugin-svelte to support runes
-	// eslint-disable-next-line no-undef
 	$effect(() => {
 		imageUrl = loadDogImage();
 	});

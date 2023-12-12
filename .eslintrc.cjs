@@ -40,5 +40,13 @@ module.exports = {
 				parser: '@typescript-eslint/parser'
 			}
 		}
-	]
+	],
+	globals: {
+		$state: false,
+		$derived: false,
+		$effect: false,
+		'$effect.pre': false,
+		$inspect: false,
+		$props: false
+	}
 };
