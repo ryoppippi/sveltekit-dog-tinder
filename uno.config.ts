@@ -7,12 +7,16 @@ import {
 	transformerDirectives,
 	transformerVariantGroup,
 } from 'unocss';
+import { presetDaisy } from 'unocss-preset-daisy';
 
 export default defineConfig({
 	presets: [
 		presetUno(),
 		presetAttributify(),
 		presetIcons({ autoInstall: isDevelopment }),
+		presetDaisy({
+			themes: ['cupcake'],
+		}),
 	],
 	transformers: [
 		transformerDirectives(),

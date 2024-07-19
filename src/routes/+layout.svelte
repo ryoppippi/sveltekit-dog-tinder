@@ -1,5 +1,7 @@
 <script>
 	import 'uno.css';
+	import '@unocss/reset/tailwind.css';
+
 	import { MetaTags } from 'svelte-meta-tags';
 	import { base } from '$app/paths';
 
