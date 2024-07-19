@@ -1,7 +1,7 @@
 import { browser } from '$app/environment';
 
 export class LikedDogsList {
-	likedDogsListRune = $state<Set<string>>(new Set());
+	likedDogsListRune = $state(new Set<string>());
 
 	constructor() {
 		if (!browser) {
