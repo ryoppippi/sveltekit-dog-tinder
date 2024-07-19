@@ -3,13 +3,13 @@
 	"type": "module",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "vite dev",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"dev": "bun -b vite dev",
+		"check": "bun -b svelte-kit sync && bun -b svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"build": "vite build",
+		"build": "bun -b vite build",
 		"lint": "eslint --cache .",
 		"format": "npm run lint -- --fix",
-		"preview": "vite preview"
+		"preview": "bun -b vite preview"
 	},
 	"devDependencies": {
 		"@ryoppippi/eslint-config": "npm:@jsr/ryoppippi__eslint-config",
