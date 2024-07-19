@@ -4,11 +4,11 @@ module.exports = {
 	safelist: [],
 	// whitelistPatterns: [/svelte-/],
 	theme: {
-		extend: {}
+		extend: {},
 	},
 	daisyui: {
 		logs: false,
-		themes: ['cupcake', 'dark', 'cmyk']
+		themes: ['cupcake', 'dark', 'cmyk'],
 	},
-	plugins: [require('daisyui')]
+	plugins: [require('daisyui')],
 };

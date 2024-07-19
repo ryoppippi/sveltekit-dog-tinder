@@ -6,13 +6,13 @@ import preprocess from 'svelte-preprocess';
 const config = {
 	preprocess: [
 		preprocess({
-			postcss: true
+			postcss: true,
 		}),
-		vitePreprocess()
+		vitePreprocess(),
 	],
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
 	},
 
 	compilerOptions: {
@@ -20,8 +20,8 @@ const config = {
 	},
 
 	vitePlugin: {
-		inspector: true
-	}
+		inspector: true,
+	},
 };
 
 export default config;

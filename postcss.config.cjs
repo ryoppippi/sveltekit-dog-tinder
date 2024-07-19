@@ -9,11 +9,11 @@ const config = {
 	plugins: [
 		tailwindcss(), // first load TailwindCSS
 		autoprefixer(), // then run autoprefixer
-		!dev && // optimize the code for production
-			cssnano({
-				preset: 'default'
-			})
-	]
+		!dev // optimize the code for production
+		&& cssnano({
+			preset: 'default',
+		}),
+	],
 };
 
 module.exports = config;
