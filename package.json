@@ -3,10 +3,10 @@
 	"type": "module",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "bun -b vite dev",
+		"dev": "vite dev",
 		"check": "bun -b svelte-kit sync && bun -b svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"build": "bun -b vite build",
+		"build": "vite build",
 		"lint": "eslint --cache .",
 		"format": "npm run lint -- --fix",
 		"preview": "bun -b vite preview"
