@@ -10,7 +10,7 @@ export class LikedDogsList {
 		/** get from local storage */
 		const likedDogsList = localStorage.getItem('likedDogsList');
 		if (likedDogsList != null) {
-			this.likedDogsListRune = new Set(JSON.parse(likedDogsList));
+			this.likedDogsListRune = new Set(JSON.parse(likedDogsList) as string[]);
 		}
 	}
 
