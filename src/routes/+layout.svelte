@@ -1,5 +1,4 @@
 <script>
-	import '../app.css';
 	import { base } from '$app/paths';
 	import { MetaTags } from 'svelte-meta-tags';
 
