@@ -1,6 +1,11 @@
 import adapter from '@sveltejs/adapter-cloudflare';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
+/** @param {...string} args */
+function relativePath(...args) {
+	return path.resolve(import.meta.dirname, ...args);
+}
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess: [
@@ -9,6 +14,11 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
+		typescript: {
+			config(config) {
+				config.include.push(relativePath('../uno.config.ts'));
+			},
+		},
 	},
 
 	compilerOptions: {
