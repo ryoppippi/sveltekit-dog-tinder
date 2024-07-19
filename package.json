@@ -13,7 +13,7 @@
 	},
 	"devDependencies": {
 		"@ryoppippi/eslint-config": "npm:@jsr/ryoppippi__eslint-config",
-		"@sveltejs/adapter-cloudflare": "^3.0.0",
+		"@sveltejs/adapter-cloudflare": "^3.0.2",
 		"@sveltejs/kit": "^2.5.18",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
 		"@unocss/extractor-svelte": "^0.61.5",
