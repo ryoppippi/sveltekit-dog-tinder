@@ -11,7 +11,10 @@ export class LikedDogsList {
 		/** get from local storage */
 		const likedDogsList = localStorage.getItem('likedDogsList');
 		if (likedDogsList != null) {
-			this.likedDogsListRune = new SvelteSet(JSON.parse(likedDogsList) as string[]);
+			const list = JSON.parse(likedDogsList) as string[];
+			list.forEach((dog) => {
+				this.likedDogsListRune.add(dog);
+			});
 		}
 	}
 
