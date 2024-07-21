@@ -1,7 +1,8 @@
+import { SvelteSet } from 'svelte/reactivity';
 import { browser } from '$app/environment';
 
 export class LikedDogsList {
-	likedDogsListRune = $state(new Set<string>());
+	likedDogsListRune = new SvelteSet<string>();
 
 	constructor() {
 		if (!browser) {
@@ -10,7 +11,7 @@ export class LikedDogsList {
 		/** get from local storage */
 		const likedDogsList = localStorage.getItem('likedDogsList');
 		if (likedDogsList != null) {
-			this.likedDogsListRune = new Set(JSON.parse(likedDogsList) as string[]);
+			this.likedDogsListRune = new SvelteSet(JSON.parse(likedDogsList) as string[]);
 		}
 	}
 
