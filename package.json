@@ -27,7 +27,7 @@
 		"svelte-meta-tags": "^2.8.0",
 		"tslib": "^2.6.3",
 		"typescript": "^5.5.4",
-		"typescript-svelte-plugin": "^0.3.39",
+		"typescript-svelte-plugin": "^0.3.40",
 		"unocss": "^0.61.7",
 		"unocss-preset-daisy": "^7.0.0",
 		"vite": "^5.3.5"
