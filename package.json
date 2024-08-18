@@ -30,7 +30,7 @@
 		"typescript-svelte-plugin": "^0.3.40",
 		"unocss": "^0.62.1",
 		"unocss-preset-daisy": "^7.0.0",
-		"vite": "^5.4.0"
+		"vite": "^5.4.1"
 	},
 	"trustedDependencies": [
 		"svelte-preprocess"
