@@ -16,7 +16,7 @@
 		"@sveltejs/adapter-static": "^3.0.5",
 		"@sveltejs/kit": "^2.6.1",
 		"@sveltejs/vite-plugin-svelte": "^3.1.2",
-		"@unocss/extractor-svelte": "^0.63.1",
+		"@unocss/extractor-svelte": "^0.63.2",
 		"daisyui": "^3.9.4",
 		"eslint": "^9.11.1",
 		"eslint-plugin-format": "^0.1.2",
