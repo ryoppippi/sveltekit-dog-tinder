@@ -22,7 +22,7 @@
 		"eslint-plugin-format": "^0.1.2",
 		"eslint-plugin-svelte": "^2.46.0",
 		"std-env": "^3.8.0",
-		"svelte": "^5.2.10",
+		"svelte": "^5.2.11",
 		"svelte-check": "^4.1.0",
 		"svelte-meta-tags": "^2.8.0",
 		"tslib": "^2.8.1",
