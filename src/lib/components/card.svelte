@@ -1,6 +1,6 @@
 <script lang='ts'>
-	import { fade, fly, scale } from 'svelte/transition';
 	import { LikedDogsList } from '$lib/rune.svelte.js';
+	import { fade, fly, scale } from 'svelte/transition';
 
 	const likedDogsList = new LikedDogsList();
 

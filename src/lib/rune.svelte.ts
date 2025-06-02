@@ -1,5 +1,5 @@
-import { SvelteSet } from 'svelte/reactivity';
 import { browser } from '$app/environment';
+import { SvelteSet } from 'svelte/reactivity';
 
 export class LikedDogsList {
 	likedDogsListRune = new SvelteSet<string>();

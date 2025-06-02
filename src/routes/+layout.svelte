@@ -1,9 +1,9 @@
 <script>
+	import { base } from '$app/paths';
+	import { MetaTags } from 'svelte-meta-tags';
+
 	import 'uno.css';
 	import '@unocss/reset/tailwind.css';
-
-	import { MetaTags } from 'svelte-meta-tags';
-	import { base } from '$app/paths';
 
 	const pageTitle = 'Doginder🐶';
 	const description = 'Tinder for Dogs';

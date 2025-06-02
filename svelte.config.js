@@ -17,7 +17,7 @@ const config = {
 		adapter: adapter(),
 		typescript: {
 			config(config) {
-				config.include.push(relativePath('../uno.config.ts'));
+				config.include.push(relativePath('./uno.config.ts'));
 			},
 		},
 	},
