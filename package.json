@@ -12,13 +12,13 @@
 		"preview": "bun -b vite preview"
 	},
 	"devDependencies": {
-		"@ryoppippi/eslint-config": "npm:@jsr/ryoppippi__eslint-config",
+		"@ryoppippi/eslint-config": "^0.3.7",
 		"@sveltejs/adapter-static": "^3.0.8",
 		"@sveltejs/kit": "^2.20.8",
 		"@sveltejs/vite-plugin-svelte": "^4.0.4",
 		"@unocss/extractor-svelte": "^66.1.2",
 		"daisyui": "^3.9.4",
-		"eslint": "^9.14.0",
+		"eslint": "^9.28.0",
 		"eslint-plugin-format": "^1.0.1",
 		"eslint-plugin-svelte": "^3.9.0",
 		"std-env": "^3.9.0",
