@@ -18,7 +18,7 @@
 		"@sveltejs/vite-plugin-svelte": "^4.0.4",
 		"@unocss/extractor-svelte": "^66.3.2",
 		"daisyui": "^3.9.4",
-		"eslint": "^9.29.0",
+		"eslint": "^9.30.0",
 		"eslint-plugin-format": "^1.0.1",
 		"eslint-plugin-svelte": "^3.10.1",
 		"std-env": "^3.9.0",
