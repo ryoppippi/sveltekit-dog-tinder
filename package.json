@@ -20,7 +20,7 @@
 		"daisyui": "^3.9.4",
 		"eslint": "^9.31.0",
 		"eslint-plugin-format": "^1.0.1",
-		"eslint-plugin-svelte": "^3.10.1",
+		"eslint-plugin-svelte": "^3.11.0",
 		"std-env": "^3.9.0",
 		"svelte": "^5.36.2",
 		"svelte-check": "^4.2.2",
