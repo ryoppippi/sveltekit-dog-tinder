@@ -14,7 +14,7 @@
 	"devDependencies": {
 		"@ryoppippi/eslint-config": "^0.3.7",
 		"@sveltejs/adapter-static": "^3.0.8",
-		"@sveltejs/kit": "^2.25.0",
+		"@sveltejs/kit": "^2.25.1",
 		"@sveltejs/vite-plugin-svelte": "^4.0.4",
 		"@unocss/extractor-svelte": "^66.3.3",
 		"daisyui": "^3.9.4",
